@@ -1,0 +1,107 @@
+/* 태블릿 화면 기준 */
+body {
+    transition: all 0.3s;
+    overflow: hidden;
+}
+
+div.error {
+    position:absolute;
+    top:50%; left:50%;
+    transform: translate(-50%, -50%);
+}
+
+div.emoji {
+    height: 20vw;
+    width: 20vw;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translate(0, 100%);
+    float:left;
+}
+
+h1 {
+    font-family: 'Spoqa Han Sans', sans-serif;
+    font-weight: 700;
+}
+
+h1.error_code {
+    font-size: 20vw;
+    color: #c5d2d9;
+    margin-left: auto;
+    margin-right: auto; 
+    float:left;
+}
+h1.error_code#left {
+    transform: translate(-10%, 0);
+}
+h1.error_code#right {
+    transform: translate(10%, 0);
+}
+
+h1.error_message {
+    transform-origin: 50% 50%;
+    transform: translate(0, -25%);
+    text-align:center;
+    font-size: 3vw;
+    color: #c5d2d9;
+}
+
+/* 다크 모드 대응 */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #212121;
+    }
+    div.error {
+        opacity: 0.8;
+    }
+}
+
+/* 모바일용 */
+@media screen and (max-width: 768px) {
+    h1.error_message {
+        transition: all 0.3s;
+        font-size: 4vw;
+    }
+    div.error {
+        transition: transform 0.3s, opacity 0.3s;
+        transform-origin: 250% 250%;
+        transform: scale(1.25);
+    }
+}
+
+/* 모바일 → 태블릿간 부드러운 전환을 위함 */
+@media screen and (min-width: 769px) and (max-width: 944px){
+    h1.error_message {
+        transition: all 0.3s;
+        font-size: 3vw;
+    }
+    div.error {
+        transition: transform 0.3s, opacity 0.3s;
+        transform-origin: 250% 250%;
+    }
+}
+
+/* 대화면 데스크톱 → 태블릿간 부드러운 전환을 위함 */
+@media screen and (min-width: 945px) and (max-width: 1199px){
+    h1.error_message {
+        transition: all 0.3s;
+        font-size: 3vw;
+    }
+    div.error {
+        transition: transform 0.3s, opacity 0.3s;
+        transform-origin: -150% -150%;
+    }
+}
+
+/* 대화면 데스크톱용 */
+@media screen and (min-width: 1200px) {
+    h1.error_message {
+        transition: all 0.3s;
+        font-size: 2vw;
+    }
+    div.error {
+        transition: transform 0.3s, opacity 0.3s;
+        transform-origin: -150% -150%;
+        transform: scale(0.75);
+    }
+}
