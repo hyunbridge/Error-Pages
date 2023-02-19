@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>{{message}}</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/gh/hyunbridge/error-pages@main/style.min.css,npm/spoqa-han-sans@latest/css/SpoqaHanSansNeo.min.css" crossorigin="anonymous">
-</head>
-<body ondragstart="return false" onselectstart="return false">
-<div class="error">
-<div class="error_code_with_emoji">
-<h1 class="error_code" id="left">{{code_left}}</h1>
-<div class="emoji">
-    {{emoji}}
-</div>
-<h1 class="error_code" id="right">{{code_right}}</h1>
-</div>
-<h1 class="error_message">{{message}}</h1>
-</div>
-</body>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/spoqa-han-sans@latest/css/SpoqaHanSansNeo.min.css"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/hyunbridge/error-pages@main/style.min.css"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body ondragstart="return false" onselectstart="return false">
+    <div class="error">
+      <div class="error_code_with_emoji">
+        <h1 class="error_code" id="left">{{code_left}}</h1>
+        <div class="emoji">{{emoji}}</div>
+        <h1 class="error_code" id="right">{{code_right}}</h1>
+      </div>
+      <h1 class="error_message">{{message}}</h1>
+    </div>
+  </body>
 </html>
